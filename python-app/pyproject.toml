@@ -1,0 +1,21 @@
+[build-system] # Diz como o pacote vai ser construído
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project] # Nome, versão, descrição e versão mínima do Python
+name = "python-app"
+version = "0.1.0"
+description = "Minimal Python package for CI/CD pipeline validation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [] # Dependencias de produção
+
+[project.optional-dependencies] # Dependências de desenvolvimento / testes
+dev = [
+    "pytest>=8.0.0",
+    "build>=1.0.0",
+    "pip-audit>=2.7.0"
+]
+
+[tool.setuptools.packages.find] # Direciona os setuptools a procurarem o pacote dentro da pasta src
+where = ["src"]
