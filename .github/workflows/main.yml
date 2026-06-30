@@ -4,7 +4,7 @@ on:
   push:  # Evento que aciona o fluxo de trabalho (no caso, um push)
     paths-ignore:
       - 'README.md'  # Ignora o arquivo README.md
-      - '.gitgnore'  # Ignora o arquivo .gitignore
+      - '.gitignore'  # Ignora o arquivo .gitignore
   workflow_dispatch:
 
 jobs:  # Definição dos trabalhos a serem executados
@@ -20,7 +20,7 @@ jobs:  # Definição dos trabalhos a serem executados
         with:
           node-version: '18.x'  # Versão do Node.js a ser usada
       - name: Install dependencies  # Nome do passo
-        run: cd app && npm install  # Comando para instalar as dependências do projeto
+        run: cd node-app && npm install  # Comando para instalar as dependências do projeto
 
   
   test: # Nome do trabalho
@@ -34,6 +34,6 @@ jobs:  # Definição dos trabalhos a serem executados
         with:
           node-version: '18.x' # Versão do Node.js a ser usada
       - name: Install dependencies # Nome do passo
-        run: cd app && npm install # Comando para instalar as dependências do projeto
+        run: cd node-app && npm install # Comando para instalar as dependências do projeto
       - name: Run tests # Nome do passo
-        run: cd app && npm test # Comando para executar os testes do projeto
+        run: cd node-app && npm test # Comando para executar os testes do projeto
