@@ -14,7 +14,8 @@ dependencies = [] # Dependencias de produção
 dev = [
     "pytest>=8.0.0",
     "build>=1.0.0",
-    "pip-audit>=2.7.0"
+    "pip-audit>=2.7.0",
+    "Django==2.2.0",
 ]
 
 [tool.setuptools.packages.find] # Direciona os setuptools a procurarem o pacote dentro da pasta src
