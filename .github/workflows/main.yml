@@ -36,4 +36,4 @@ jobs:  # Definição dos trabalhos a serem executados
       - name: Install dependencies # Nome do passo
         run: cd node-app && npm install # Comando para instalar as dependências do projeto
       - name: Run tests # Nome do passo
-        run: cd node-app && npm test # Comando para executar os testes do projeto
+        run: cd node-app && npm test # Comando para executar os testes do projeto.
